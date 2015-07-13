@@ -7,8 +7,11 @@ class Main extends CI_Controller
     function index()
     {
         $this->load->model('user');
-         $data['hello']=$this->user->allUser();
-         $this->load->view('hello',$data);
+        $data['hello']=$this->user->allUser();
+         $data['getallUser']=$this->user->fetchallUser();
+        $this->load->view('hello',$data);
+        
+       
         
        
     }

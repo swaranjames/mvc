@@ -1,6 +1,11 @@
 <?php
 
-echo "<h1>Welcome<h1>";
+echo "Welcome";
 echo $hello;
+
+foreach($getallUser as $user)
+{
+    echo $user->id;
+}
 
 ?>
