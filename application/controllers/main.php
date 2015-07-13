@@ -9,6 +9,7 @@ class Main extends CI_Controller
         $this->load->model('user');
         $data['hello']=$this->user->allUser();
          $data['getallUser']=$this->user->fetchallUser();
+        $data['userfetch']=$this->user->getuserbyid(2);
         $this->load->view('hello',$data);
         
        

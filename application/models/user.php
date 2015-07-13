@@ -21,6 +21,22 @@ class User extends CI_Model
             return false;
         }
     }
+    
+    function getuserbyid($id)
+    {
+        $this->load->database();
+        $sql="select * from usermaster where id=?";
+        $q=$this->db->query($sql,array($id));
+        if($q->num_rows()>0)
+        {
+            return $q->result();
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
 }
 
 ?>

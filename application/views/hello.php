@@ -8,4 +8,6 @@ foreach($getallUser as $user)
     echo $user->id;
 }
 
+echo "</br>user id: ".$userfetch[0]->username;
+
 ?>
